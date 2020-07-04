@@ -12,14 +12,35 @@ export class HambergerPage implements OnInit {
   pages=[
     {
       id:'1',
-      title:'contact',
-      url:'/menu/contact'
+      title:'Home',
+      url:'/menu/landingPage'
     },
     {
       id:'2',
-      title:'landingPage',
+      title:'Technologies',
+      url:'/menu/contact'
+    },
+    {
+      id:'3',
+      title:'Experience',
       url:'/menu/landingPage'
-    }
+    },
+    {
+      id:'4',
+      title:'Client',
+      url:'/menu/contact'
+    },
+    {
+      id:'5',
+      title:'Contact',
+      url:'/menu/landingPage'
+    },
+    {
+      id:'6',
+      title:'About App',
+      url:'/menu/contact'
+    },
+    
   ]
 
   selectedPath='';
