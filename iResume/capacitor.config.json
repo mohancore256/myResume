@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "myResume",
+  "appName": "iResume",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
