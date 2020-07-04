@@ -12,8 +12,5 @@ export class LandingPagePage implements OnInit {
 
   ngOnInit() {
   }
-  showMenu(){
-    console.log('called menu');
-    this.router.navigateByUrl('/menu');
-  }
+ 
 }

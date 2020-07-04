@@ -13,9 +13,6 @@ export class ContactPage implements OnInit {
   ngOnInit() {
   }
 
-  showMenu(){
-    console.log('called menu');
-    this.router.navigateByUrl('/menu');
-  }
+ 
 
 }

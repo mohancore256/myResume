@@ -13,32 +13,38 @@ export class HambergerPage implements OnInit {
     {
       id:'1',
       title:'Home',
-      url:'/menu/landingPage'
+      url:'/menu/landingPage',
+      icon:'home-outline'
     },
     {
       id:'2',
       title:'Technologies',
-      url:'/menu/contact'
+      url:'/menu/contact',
+      icon:'ribbon-outline'
     },
     {
       id:'3',
       title:'Experience',
-      url:'/menu/landingPage'
+      url:'/menu/landingPage',
+      icon:'newspaper-outline'
     },
     {
       id:'4',
       title:'Client',
-      url:'/menu/contact'
+      url:'/menu/contact',
+      icon:'trophy-outline'
     },
     {
       id:'5',
-      title:'Contact',
-      url:'/menu/landingPage'
+      title:'Contact Me',
+      url:'/menu/landingPage',
+      icon:'mail-outline'
     },
     {
       id:'6',
       title:'About App',
-      url:'/menu/contact'
+      url:'/menu/contact',
+      icon:'desktop-outline'
     },
     
   ]
