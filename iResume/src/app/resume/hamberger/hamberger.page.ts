@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-hamberger',
@@ -23,7 +24,7 @@ export class HambergerPage implements OnInit {
 
   selectedPath='';
 
-  constructor(private router :Router) { 
+  constructor(private menu: MenuController,private router :Router,) { 
     this.router.events.subscribe((event:RouterEvent) =>{
       this.selectedPath=event.url;
     })
@@ -31,5 +32,4 @@ export class HambergerPage implements OnInit {
 
   ngOnInit() {
   }
-
 }
