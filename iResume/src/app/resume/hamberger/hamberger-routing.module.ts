@@ -15,6 +15,10 @@ const routes: Routes = [
       {
         path: 'landingPage',
         loadChildren: () => import('../landing-page/landing-page.module').then(m => m.LandingPagePageModule)
+      },
+      {
+        path: '',
+        redirectTo:'/menu/landingPage'
       }
     ]
   },
