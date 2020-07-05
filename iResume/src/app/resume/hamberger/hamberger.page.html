@@ -1,6 +1,6 @@
 <ion-menu side="start" menuId="hamburger" contentId="main" class="my-custom-menu">
   <ion-header>
-    <ion-toolbar color="Contrast">
+    <ion-toolbar color="Contrast" >
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
@@ -8,7 +8,7 @@
     <ion-list>
       <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
         <ion-item [routerLink]="p.url" routerDirection="root" [class.active-item]="selectedPath===p.url">
-          <ion-icon name={{p.icon}}></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{p.title}}
+          <ion-icon slot="start" name={{p.icon}}></ion-icon>{{p.title}}
         </ion-item>
       </ion-menu-toggle>
     </ion-list>

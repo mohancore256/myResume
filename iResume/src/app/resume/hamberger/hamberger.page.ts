@@ -38,7 +38,7 @@ export class HambergerPage implements OnInit {
       id:'5',
       title:'Contact Me',
       url:'/menu/landingPage',
-      icon:'mail-outline'
+      icon:'mail'
     },
     {
       id:'6',
@@ -60,14 +60,14 @@ export class HambergerPage implements OnInit {
   ngOnInit() {
   }
 
-  openFirst() {
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
-  }
+  // openFirst() {
+  //   this.menu.enable(true, 'first');
+  //   this.menu.open('first');
+  // }
 
-  openEnd() {
-    this.menu.open('end');
-  }
+  // openEnd() {
+  //   this.menu.open('end');
+  // }
 
   openCustom() {
     this.menu.enable(true, 'hamburger');
