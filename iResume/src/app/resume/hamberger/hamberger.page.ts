@@ -18,6 +18,12 @@ export class HambergerPage implements OnInit {
     },
     {
       id:'2',
+      title:'Personal Information',
+      url:'/menu/landingPage',
+      icon:'person-sharp'
+    },
+    {
+      id:'2',
       title:'Technologies',
       url:'/menu/contact',
       icon:'ribbon-outline'
