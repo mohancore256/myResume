@@ -1,7 +1,8 @@
 {
   "name": "iResume",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular",
   "id": "d2972ebb"

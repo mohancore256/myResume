@@ -20,7 +20,7 @@ export class HambergerPage implements OnInit {
       id:'2',
       title:'Personal Information',
       url:'/menu/landingPage',
-      icon:'person-sharp'
+      icon:'person-outline'
     },
     {
       id:'2',
@@ -44,7 +44,7 @@ export class HambergerPage implements OnInit {
       id:'5',
       title:'Contact Me',
       url:'/menu/landingPage',
-      icon:'mail'
+      icon:'mail-outline'
     },
     {
       id:'6',
