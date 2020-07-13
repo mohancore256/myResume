@@ -14,15 +14,11 @@ export class ContactPage implements OnInit {
   constructor(private router:Router,private fb: FormBuilder) { }
 
   ngOnInit() {
-    // this.sendEmailFrom = this.fb.group({
-    //    from: ["", Validators.required],
-    //   // to: ["", Validators.required],
-    //   // subject: ["", Validators.required],
-    //   // body: ["", Validators.required]  
-    // });
-  //}); 
-this.sendEmailFrom = new FormGroup({
-  from: new FormControl(),
+    this.sendEmailFrom = new FormGroup({
+      from: new FormControl(),
+      to: new FormControl(),
+      subject: new FormControl(),
+      body: new FormControl()
 })
 
   }
@@ -32,6 +28,7 @@ this.sendEmailFrom = new FormGroup({
     this.email.from = this.sendEmailFrom.get("from").value;
     this.email.to = this.sendEmailFrom.get("to").value;
     this.email.subject = this.sendEmailFrom.get("subject").value;
+    console.log(this.email);
     
   }
 

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start" >
+    <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Contact Me</ion-title>
@@ -8,88 +8,58 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid >
+  <ion-grid>
     <ion-row>
-      <ion-col >
+      <ion-col>
         <ion-card>
           <ion-item>
             <ion-icon name="mail-outline" slot="start"></ion-icon>
             <ion-label>Send an Email to Me</ion-label>
           </ion-item>
           <ion-card-content>
-            <p>Send me your contact details and message or comments. You can also contact me through social media on  ,   or . If you believe there is any way I can improve this website, I will be happy to hear your suggestion. Thank you ...</p>
+            <p>Send me your contact details and message or comments. You can also contact me through social media on ,
+              or . If you believe there is any way I can improve this website, I will be happy to hear your suggestion.
+              Thank you ...</p>
             <form id="sendEmailFrom" [formGroup]="sendEmailFrom" (ngSubmit)="onSendEmailFrom()">
 
-              <label for="from">From :</label>
-              <input  formControlName="from" type="text">
-              <!--<div class="container">
-            
-                <div class="row">
-                  <div class="col-md-2">
-                    <label for="projectName">Project :</label>
-                  </div>
-                  <div class="col-md-10">
-                    <input  class="mohan" formControlName="projectName" type="text">
-                    <div *ngIf="submitted && f.projectName.errors" class="invalid-danger">
-                      <div *ngIf="submitted && f.projectName.errors.required">Project Name is required</div>
-                    </div>
-                  </div>
-                </div>
-            
-                <div class="row">
-                  <div class="col-md-2"></div>
-                  <div class="col-md-11">
-                    <div class="row">
-                      <div class="col-md-1"><input formControlName="enableDateFields" type="checkbox" (click)="showDateFields()">
-                      </div>
-                      <div class="col-md-3"><label>Set Start and End Date</label></div>
-                      <div class="col-md-2"><input formControlName="startDate" type="date" placeholder='yyyy-mm-dd'>
-                        <div *ngIf="submitted && f.startDate.errors" class="invalid-danger">
-                          <div *ngIf="submitted && f.startDate.errors.required">Start Date is required</div>
-                        </div>
-                      </div>
-                      <div class="col-md-2"><input formControlName="endDate" type="date" placeholder='yyyy-mm-dd'>
-                        <div *ngIf="submitted && f.endDate.errors" class="invalid-danger">
-                          <div *ngIf="submitted && f.endDate.errors.required">End Date is required</div>
-                        </div>
-                      </div>
-            
-                    </div>
-            
-                  </div>
-                </div>
-            
-                <div class="row">
-                  <div class="col-md-2 " id="priority"><label for="priority">Priority :</label></div>
-                  <div class="col-md-10"><input class ="slider" formControlName="priority" type="range" name="volume" min="0" max="30">
-                    <div *ngIf="submitted && f.priority.errors" class="invalid-danger">
-                      <div *ngIf="submitted && f.priority.errors.required">Set Priority </div>
-                    </div>
-                  </div>
-                </div>
-            
-                <div class="row ">
-                  <div class="col-md-2"><label for="manager">Manager :</label></div>
-                  <div  class="col-md-10">
-                    <app-search-drop-box  [dataList] = "userList" [columnName] = "columnName" (selectedUser)="populateManger($event)"></app-search-drop-box>
-                  </div>
-                </div>
-            
-                <div class="row">
-                  <div class="col-md-8"></div>
-                  <div class="col-md-4">
-                    <div class="row">
-                      <div class="col-md-4"><button type="submit">Add</button></div>
-                      <div class="col-md-4"><button type="submit" (click)="reset()" class="btn btn-primary">Reset</button></div>
-                    </div>
-                  </div>
-                </div>
-            
-                <hr>
-            
-              </div> -->
-            </form> 
+              <ion-item>
+                <ion-label position="floating">To</ion-label>
+                <ion-input formControlName="to" placeholder='Mohan Kumar Kasetty' readonly></ion-input>
+              </ion-item>
 
+              <!-- <ion-item>
+                <ion-label>From</ion-label>
+                <ion-input type="text" formControlName="from"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Subject</ion-label>
+                <ion-input type="text" formControlName="subject"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Message</ion-label>
+                <ion-textarea formControlName="body"></ion-textarea>
+              </ion-item> -->
+              <ion-item>
+                <ion-label position="floating">From</ion-label>
+                <ion-input formControlName="from"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Subject</ion-label>
+                <ion-input formControlName="subject"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Message</ion-label>
+                <ion-textarea formControlName="body"></ion-textarea>
+              </ion-item>
+
+              <ion-button class="ion-activatable ripple-parent"  expand="block" type="submit">Send Email</ion-button>
+              <!-- <ion-button class="ion-activatable ripple-parent" slot="end" type="submit" shape="round">Send Email</ion-button> -->
+            </form>
+          
           </ion-card-content>
         </ion-card>
       </ion-col>
