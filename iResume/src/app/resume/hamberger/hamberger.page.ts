@@ -43,7 +43,7 @@ export class HambergerPage implements OnInit {
     {
       id:'5',
       title:'Contact Me',
-      url:'/menu/landingPage',
+      url:'/menu/contact',
       icon:'mail-outline'
     },
     {
