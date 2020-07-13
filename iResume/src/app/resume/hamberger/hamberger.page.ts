@@ -19,25 +19,25 @@ export class HambergerPage implements OnInit {
     {
       id:'2',
       title:'Personal Information',
-      url:'/menu/landingPage',
+      url:'/menu/myProfile',
       icon:'person-outline'
     },
     {
       id:'2',
       title:'Technologies',
-      url:'/menu/contact',
+      url:'/menu/primarySkills',
       icon:'ribbon-outline'
     },
     {
       id:'3',
       title:'Experience',
-      url:'/menu/landingPage',
+      url:'/menu/workExperience',
       icon:'newspaper-outline'
     },
     {
       id:'4',
       title:'Client',
-      url:'/menu/contact',
+      url:'/menu/myClient',
       icon:'trophy-outline'
     },
     {
@@ -49,7 +49,7 @@ export class HambergerPage implements OnInit {
     {
       id:'6',
       title:'About App',
-      url:'/menu/contact',
+      url:'/menu/aboutApp',
       icon:'desktop-outline'
     },
     

@@ -17,6 +17,18 @@ const routes: Routes = [
         loadChildren: () => import('../landing-page/landing-page.module').then(m => m.LandingPagePageModule)
       },
       {
+        path: 'myProfile',
+        loadChildren: () => import('../personalinfo/personalinfo.module').then(m => m.PersonalinfoPageModule)
+      }, 
+      {
+        path: 'workExperience',
+        loadChildren: () => import('../work-experience/work-experience.module').then(m => m.WorkExperiencePageModule)
+      },
+      {
+        path: 'aboutApp',
+        loadChildren: () => import('../about-app/about-app.module').then(m => m.AboutAppPageModule)
+      },
+      {
         path: '',
         redirectTo:'/menu/landingPage'
       }
