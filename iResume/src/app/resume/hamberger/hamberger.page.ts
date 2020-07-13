@@ -50,7 +50,7 @@ export class HambergerPage implements OnInit {
       id:'6',
       title:'About App',
       url:'/menu/aboutApp',
-      icon:'desktop-outline'
+      icon:'help-circle-outline'
     },
     
   ]
