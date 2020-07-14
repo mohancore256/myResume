@@ -1,0 +1,27 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    color: black;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  header{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+//   ion-card:hover {
+//     transform: scale(1.025);
+//     border-style: solid;
+// }
