@@ -3,10 +3,56 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>My Informationa</ion-title>
+    <ion-title>Personal Information</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="text-align: center;color: cadetblue;font-weight: 300; color: #22A39F;"><h2 style="font-weight: 300%;" >Profile</h2></ion-card-title>
+      <ion-card-subtitle style="text-align: center;">I am an Full Stack Developer</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <hr style="height: 2px;border-width:0;color:gray;background-color:gray;">
+      <ion-grid>
+        <ion-row >
+          <ion-col when-size-xs="12" when-offset-xs="6" style="text-align: center;color: cadetblue;">
+            <ion-card-title style="text-align: center;color: cadetblue;"><h2>About me</h2></ion-card-title>
+            
+          </ion-col>
+          <ion-col>
+            <ion-avatar style="width: 100%;height: 100%;text-align: center;">
+              <img src="../../../assets/images/mohan.jpg">
+            </ion-avatar>
+          </ion-col>
+          <ion-col>
+            <ion-card-title style="text-align: center; color: cadetblue;"><h2>Details</h2></ion-card-title>
+            <ion-item>
+              <ion-label style="font-weight: 700;">Name</ion-label>
+              <ion-label> Mohan Kumar Kasetty</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                Button Item
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                Anchor Item
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                Secondary Color Item
+              </ion-label>
+            </ion-item>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

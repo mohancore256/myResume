@@ -26,7 +26,7 @@ export class ContactPage implements OnInit {
   onSendEmailFrom(){
     this.email = new Email();
     this.email.from = this.sendEmailFrom.get("from").value;
-    this.email.to = this.sendEmailFrom.get("to").value;
+    this.email.to = "kasettymohan456@gmail.com";
     this.email.subject = this.sendEmailFrom.get("subject").value;
     console.log(this.email);
     
