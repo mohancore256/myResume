@@ -1,8 +1,9 @@
-const express = require('express')
+const express = require('express');
+var cors = require('cors');
 const bodyParser = require("body-parser");
-const mailSend = require('./mailSend')
-const app = express()
-
+const mailSend = require('./mailSend');
+const app = express();
+app.use(cors());
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -16,12 +17,13 @@ app.get('/', (req, res) =>  {
     mailSend.sendMail(mailOptions);
     res.send('Hello World!');
 });
-app.post('/sendMail',(req,res) => {
+app.options('/sendMail', cors());
+app.post('/sendMail',cors(), (req,res) => {
     //code to perform particular action.
     //To access POST variable use req.body()methods.
     console.log(req.body);
     mailSend.sendMail(req.body);
-    res.send('Mail Sent Successfully');
+    res.json({status: 'Success'});
 });
 
 app.listen(3000, () => console.log(`Example app listening at http://localhost:3000`))
