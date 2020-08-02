@@ -2,7 +2,7 @@ const express = require('express');
 var cors = require('cors');
 const bodyParser = require("body-parser");
 const mailSend = require('./mailSend');
-const app = express();
+const app = express(); 
 app.use(cors());
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));

@@ -1,0 +1,25 @@
+  <ion-content padding>
+    <ion-list>
+      <form novalidate (ngSubmit)="signup()" [formGroup]="signupform">
+       
+  
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.email" formControlName="email" [class.error1]="!signupform.controls.email.valid && signupform.controls.email.dirty"></ion-input>
+        </ion-item>
+        <ion-item no-lines *ngIf="( signupform.get('email').hasError('minlength') || signupform.get('email').hasError('pattern') ||signupform.get('email').hasError('required') ) && signupform.get('email').touched">
+          <div class="error" *ngIf="signupform.get('email').hasError('required') && signupform.get('email').touched">
+            Please input your email
+          </div>
+          <div class="error" *ngIf="signupform.get('email').hasError('pattern') && signupform.get('email').touched">
+            Email address invalid
+          </div>
+        </ion-item>
+       
+        <button type="submit" ion-button block color="primary" [disabled]="signupform.invalid">SIGNUP</button>
+      </form>
+    </ion-list>
+  </ion-content>
+
+
+

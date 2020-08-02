@@ -25,7 +25,7 @@ export class HambergerPage implements OnInit {
     {
       id:'2',
       title:'Technologies',
-      url:'/menu/primarySkills',
+      url:'/menu/technologies',
       icon:'ribbon-outline'
     },
     {
@@ -52,7 +52,12 @@ export class HambergerPage implements OnInit {
       url:'/menu/aboutApp',
       icon:'help-circle-outline'
     },
-    
+    // {
+    //   id:'7',
+    //   title:'Workspace',
+    //   url:'/menu/workspace',
+    //   icon:'help-circle-outline'
+    // },
   ]
 
   selectedPath='';
