@@ -1,17 +1,26 @@
-<ion-menu side="start" menuId="hamburger" contentId="main" class="my-custom-menu">
+<ion-menu menuId="hamburger" contentId="main" class="my-custom-menu">
   <ion-header>
-    <ion-toolbar color="Contrast" >
-      <ion-title>Menu</ion-title>
+    <ion-toolbar color="primary appColor">
+      <ion-item color="primary appColor">
+        <ion-icon slot="start" name="menu-sharp"></ion-icon>
+        <ion-title>Menu</ion-title> 
+      </ion-item>
     </ion-toolbar>
   </ion-header>
   <ion-content>
+
     <ion-list>
       <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
-        <ion-item [routerLink]="p.url" routerDirection="root" [class.active-item]="selectedPath===p.url">
+        <ion-item *ngIf="p.url==sessionValue" [routerLink]="p.url" routerDirection="root"
+          color="primary appColor color_primary">
+          <ion-icon slot="start" name={{p.iconActive}}></ion-icon>{{p.title}}
+        </ion-item>
+        <ion-item *ngIf="p.url!=sessionValue" [routerLink]="p.url" routerDirection="root">
           <ion-icon slot="start" name={{p.icon}}></ion-icon>{{p.title}}
         </ion-item>
       </ion-menu-toggle>
     </ion-list>
+    <p style="text-align: center;">Copyright © 2020, kmk Inc. </p>
   </ion-content>
 </ion-menu>
 <ion-router-outlet id="main"></ion-router-outlet>

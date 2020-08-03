@@ -10,6 +10,7 @@ export class ClientPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    sessionStorage.setItem("menu","/menu/myClient");
   }
 
 }

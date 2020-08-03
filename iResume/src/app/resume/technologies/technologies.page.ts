@@ -10,6 +10,7 @@ export class TechnologiesPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    sessionStorage.setItem("menu","/menu/technologies");
   }
 
 }
