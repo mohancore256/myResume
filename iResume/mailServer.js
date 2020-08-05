@@ -1,13 +1,15 @@
 const express = require('express');
+const path = require("path")
 var cors = require('cors');
 const bodyParser = require("body-parser");
 const mailSend = require('./mailSend');
 const app = express(); 
+app.use(express.static('www'))
 app.use(cors());
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.get('/', (req, res) =>  {
+app.get('/test', (req, res) =>  {
     let mailOptions = {
         from: 'kmk2java@gmail.com',
         to: 'kasettymohan456@gmail.com',
@@ -26,4 +28,4 @@ app.post('/sendMail',cors(), (req,res) => {
     res.json({status: 'Success'});
 });
 
-app.listen(3000, () => console.log(`Example app listening at http://localhost:3000`))
+app.listen(80, () => console.log(`Example app listening at http://localhost`))

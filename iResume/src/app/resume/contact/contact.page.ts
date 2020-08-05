@@ -40,7 +40,7 @@ export class ContactPage implements OnInit {
    
   }
   sendEmail(email: Email): Observable<any> {
-    return this.http.post<Email>('http://localhost:3000/sendMail', email);
+    return this.http.post<Email>('/sendMail', email);
   }
 
 
