@@ -1,9 +1,12 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="primary appColor">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Contact Me</ion-title>
+    <ion-avatar slot="end" size="small">
+      <img src="../../../assets/images/mohan.jpg">
+    </ion-avatar>
   </ion-toolbar>
 </ion-header>
 
@@ -13,7 +16,7 @@
       <ion-col>
         <ion-card>
           <ion-item>
-            <ion-icon name="mail-outline" slot="start"></ion-icon>
+            <ion-icon name="mail" slot="start"></ion-icon>
             <ion-label>Send an Email to Me</ion-label>
           </ion-item>
           <ion-card-content>
@@ -40,10 +43,23 @@
               <ion-item>
                 <ion-label>Message</ion-label>
                 <ion-textarea formControlName="body"></ion-textarea>
-              </ion-item> -->
+              </ion-item> 
               <ion-item>
                 <ion-label position="floating">From</ion-label>
                 <ion-input formControlName="from"></ion-input>
+              </ion-item>-->
+
+              <ion-item>
+                <ion-label floating>From</ion-label>
+                <ion-input type="text"  formControlName="from" [class.error1]="!sendEmailFrom.controls.from.valid && sendEmailFrom.controls.from.dirty"></ion-input>
+              </ion-item>
+              <ion-item no-lines *ngIf="( sendEmailFrom.get('from').hasError('minlength') || sendEmailFrom.get('from').hasError('pattern') ||sendEmailFrom.get('from').hasError('required') ) && sendEmailFrom.get('from').touched">
+                <div class="error" *ngIf="sendEmailFrom.get('from').hasError('required') && sendEmailFrom.get('from').touched">
+                  Please input your Email
+                </div>
+                <div class="error" *ngIf="sendEmailFrom.get('from').hasError('pattern') && sendEmailFrom.get('from').touched">
+                  Email address invalid
+                </div>
               </ion-item>
 
               <ion-item>
@@ -56,7 +72,8 @@
                 <ion-textarea formControlName="body"></ion-textarea>
               </ion-item>
 
-              <ion-button class="ion-activatable ripple-parent"  expand="block" type="submit"><ion-icon name="mail"></ion-icon>Send Email<ion-icon name="send"></ion-icon></ion-button>
+              <ion-button class="ion-activatable ripple-parent primary appColor"  expand="block" type="submit">
+                <!--ion-icon name="mail"></ion-icon>-->Send Email<ion-icon name="send"></ion-icon></ion-button>
               <!-- <ion-button class="ion-activatable ripple-parent" slot="end" type="submit" shape="round">Send Email</ion-button> -->
             </form>
           

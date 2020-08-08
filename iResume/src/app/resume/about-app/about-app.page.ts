@@ -10,6 +10,7 @@ export class AboutAppPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    sessionStorage.setItem("menu","/menu/aboutApp");
   }
 
 }

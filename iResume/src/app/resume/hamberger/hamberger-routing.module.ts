@@ -29,6 +29,18 @@ const routes: Routes = [
         loadChildren: () => import('../about-app/about-app.module').then(m => m.AboutAppPageModule)
       },
       {
+        path: 'technologies',
+        loadChildren: () => import('../technologies/technologies.module').then(m => m.TechnologiesPageModule)
+      },
+      {
+        path: 'myClient',
+        loadChildren: () => import('../client/client.module').then(m => m.ClientPageModule)
+      },
+      {
+        path: 'workspace',
+        loadChildren: () => import('../workspace/workspace.module').then(m => m.WorkspacePageModule)
+      },
+      {
         path: '',
         redirectTo:'/menu/landingPage'
       }

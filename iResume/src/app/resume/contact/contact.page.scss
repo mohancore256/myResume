@@ -1,4 +1,20 @@
-ion-input{
+ion-title{
+  font-weight: bold;
+}
+.appColor{
+
+  color: white;
+  
+  --ion-color-primary: #22A39F;
+  --ion-color-primary-rgb: 34,163,159;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255,255,255;
+  --ion-color-primary-shade: #1e8f8c;
+  --ion-color-primary-tint: #38aca9;
+  }
+
+
+  ion-input{
     --placeholder-color: rgb(184, 178, 178);
     --placeholder-opacity: 1;
 }
@@ -6,4 +22,14 @@ ion-input{
 .ripple-parent {
     position: relative;
     overflow: hidden;
+  }
+
+  .error {
+    color: rgb(223, 62, 62);
+    font-size: 11px;
+  }
+
+  .error1 {
+    color: rgb(75, 75, 75);
+    //border-bottom: 1px solid #ff0000;
   }

@@ -17,6 +17,18 @@ const routes: Routes = [
   {
     path: 'about-app',
     loadChildren: () => import('./resume/about-app/about-app.module').then( m => m.AboutAppPageModule)
+  },
+  {
+    path: 'workspace',
+    loadChildren: () => import('./resume/workspace/workspace.module').then( m => m.WorkspacePageModule)
+  },
+  {
+    path: 'client',
+    loadChildren: () => import('./resume/client/client.module').then( m => m.ClientPageModule)
+  },
+  {
+    path: 'technologies',
+    loadChildren: () => import('./resume/technologies/technologies.module').then( m => m.TechnologiesPageModule)
   }
 ];
 

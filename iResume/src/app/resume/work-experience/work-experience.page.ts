@@ -10,6 +10,7 @@ export class WorkExperiencePage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    sessionStorage.setItem("menu","/menu/workExperience");
   }
 
 }

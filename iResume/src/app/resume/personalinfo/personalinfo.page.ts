@@ -10,6 +10,7 @@ export class PersonalinfoPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    sessionStorage.setItem("menu","/menu/myProfile");
   }
 
 }

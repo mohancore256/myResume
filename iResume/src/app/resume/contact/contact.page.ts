@@ -15,11 +15,14 @@ export class ContactPage implements OnInit {
   constructor(private router:Router,private fb: FormBuilder, private http: HttpClient) { }
 
   ngOnInit() {
+    sessionStorage.setItem("menu","/menu/contact");
+    let EMAILPATTERN = /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
     this.sendEmailFrom = new FormGroup({
-      from: new FormControl(),
-      to: new FormControl(),
-      subject: new FormControl(),
-      body: new FormControl()
+      //from: new FormControl('',Validators.required),
+      from: new FormControl('', [Validators.required, Validators.pattern(EMAILPATTERN)]),
+      to: new FormControl('',Validators.required),
+      subject: new FormControl('',Validators.required),
+      body: new FormControl('',Validators.required)
 })
 
   }
@@ -37,7 +40,7 @@ export class ContactPage implements OnInit {
    
   }
   sendEmail(email: Email): Observable<any> {
-    return this.http.post<Email>('http://localhost:3000/sendMail', email);
+    return this.http.post<Email>('/sendMail', email);
   }
 
 
