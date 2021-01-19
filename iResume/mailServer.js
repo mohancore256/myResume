@@ -9,6 +9,9 @@ app.use(cors());
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + "/index.html");
+});
 app.get('/test', (req, res) =>  {
     let mailOptions = {
         from: 'kmk2java@gmail.com',
@@ -27,5 +30,7 @@ app.post('/sendMail',cors(), (req,res) => {
     mailSend.sendMail(req.body);
     res.json({status: 'Success'});
 });
-
+app.get('*', function(req, res, next) {
+    res.sendFile(__dirname + "/www/index.html");
+  });
 app.listen(80, () => console.log(`Example app listening at http://localhost`))

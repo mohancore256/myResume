@@ -5,4 +5,5 @@ export class Email {
     subject:string;
     body:string;
     text:string;
+    phone:string;
 }
